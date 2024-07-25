@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            animation: 10s linear infinite;
+        }
+
+        .sky {
+            width: 100vw;
+            height: 100vw;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: animate-sky;
+            animation-duration: 20s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sun,
+        .moon {
+            position: absolute;
+            width: 50vmin;
+            height: 50vmin;
+            border-radius: 50%;
+
+        }
+
+        .sun {
+            background-color: gold;
+            animation-name: animate-sun;
+            animation-duration: 20s;
+            border: 0.50px dashed rgb(242, 108, 59);
+            text-align: center;
+            line-height: 50vmin;
+            color: orangered;
+        }
+
+        .moon {
+            background-color: slategray;
+            animation-name: animate-moon;
+            animation-duration: 20s;
+            text-align: center;
+            line-height: 50vmin;
+            color: bisque;
+        }
+
+        @keyframes animate-sky {
+            50% {
+                background-color: black;
+            }
+        }
+
+        @keyframes animate-sun {
+            50% {
+                box-shadow: 1px 0 5em 1em orangered;
+            }
+        }
+
+        @keyframes animate-moon {
+            from {
+                transform: translateX(-130vmin);
+            }
+
+            5% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            10% {
+                background-color: rgb(37, 33, 28);
+            }
+
+            15% {
+                background-color: rgb(60, 54, 46);
+            }
+
+            20% {
+                background-color: rgb(86, 76, 64);
+            }
+
+            25% {
+                background-color: rgb(105, 95, 82);
+            }
+
+            30% {
+                background-color: rgb(141, 126, 108);
+            }
+
+            35% {
+                background-color: rgb(156, 140, 121);
+            }
+
+            40% {
+                background-color: rgb(187, 166, 140);
+            }
+
+            45% {
+                background-color: rgb(218, 196, 168);
+            }
+
+            50% {
+                background-color: bisque;
+                box-shadow: 1px 0 5em 1em white;
+            }
+
+            55% {
+                background-color: rgb(218, 196, 168);
+            }
+
+            60% {
+                background-color: rgb(187, 166, 140);
+            }
+
+            65% {
+                background-color: rgb(156, 140, 121);
+            }
+
+            70% {
+                background-color: rgb(141, 126, 108);
+            }
+
+            75% {
+                background-color: rgb(105, 95, 82);
+            }
+
+            80% {
+                background-color: rgb(86, 76, 64);
+            }
+
+            85% {
+                background-color: rgb(60, 54, 46);
+            }
+
+            90% {
+                background-color: rgb(37, 33, 28);
+            }
+
+            95% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            to {
+                transform: translateX(130vmin);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <div class="sun">SUN</div>
+        <div class="moon">MOON</div>
+    </div>
+</body>
+
+</html>
